@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+    --radius: 0.9rem;
+  }
+
+  .dark {
+    --background: 224 45% 7%;
+    --foreground: 210 40% 96%;
+    --card: 223 40% 11%;
+    --card-foreground: 210 40% 96%;
+    --primary: 243 75% 66%;
+    --primary-foreground: 224 45% 7%;
+    --secondary: 223 30% 17%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 223 30% 17%;
+    --muted-foreground: 217 12% 65%;
+    --accent: 262 83% 68%;
+    --accent-foreground: 224 45% 7%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 223 25% 20%;
+    --input: 223 25% 20%;
+    --ring: 243 75% 66%;
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; }
+}
+
+.board-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.board-scroll::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 8px; }
+
+.katex { font-size: 1.35em !important; }
+
+.word-active { @apply text-primary font-semibold; }
