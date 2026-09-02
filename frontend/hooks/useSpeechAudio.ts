@@ -71,7 +71,7 @@ export function useSpeechAudio() {
       const data = dataRef.current;
 
       if (analyser && data && el && !el.paused) {
-        analyser.getByteTimeDomainData(data);
+        analyser.getByteTimeDomainData(data as any);
         let sum = 0;
         for (let i = 0; i < data.length; i++) {
           const v = (data[i] - 128) / 128;
