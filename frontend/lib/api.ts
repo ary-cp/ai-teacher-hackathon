@@ -2,7 +2,7 @@ import type {
   DocumentMeta, LearningReport, LessonPlan, StudentProfile, TurnResponse,
 } from "./types";
 
-const BASE = "https://ai-teacher-hackathon-production.up.railway.app";
+const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function post<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
